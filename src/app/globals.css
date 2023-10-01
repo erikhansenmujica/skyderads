@@ -8,6 +8,11 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+@font-face {
+  font-family: "Calibri";
+  src: url("/static/calibri-bold.ttf") format("truetype");
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -17,11 +22,19 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  color: #333333;
+  font-family: "Calibri";
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+  background-color: black;
+}
+button {
+  background-color: #6b5b95 !;
+}
+header {
+  z-index: 10;
 }
