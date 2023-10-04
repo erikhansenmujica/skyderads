@@ -36,20 +36,25 @@ export const FinalContactSection = ({ contactRef }: FinalContactSection) => {
         form.current!,
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       )
-      .then(
-        (result: any) => {
-          console.log(result.text);
-          setLoading(false);
-          setSuccess(true);
-          setError(false);
-        },
-        (error: any) => {
-          console.log(error.text);
-          setLoading(false);
-          setError(true);
-          setSuccess(false);
-        }
-      );
+      .then((response) => {
+        console.log(response.text);
+        setLoading(false);
+        setError(false);
+        setSuccess(true);
+        // @ts-ignore
+        window.dataLayer = window.dataLayer || [];
+        // @ts-ignore
+        window.dataLayer.push({
+          event: "formSubmission",
+          formId: "Client Lead",
+        });
+      })
+      .catch((error) => {
+        console.log(error.text);
+        setLoading(false);
+        setError(true);
+        setSuccess(false);
+      });
   };
 
   return (
