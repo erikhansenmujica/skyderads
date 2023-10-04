@@ -71,11 +71,13 @@ export const FinalContactSection = ({ contactRef }: FinalContactSection) => {
               <div className="mb-10 w-full shrink-0 grow-0 basis-auto md:mb-0 md:w-6/12 md:px-3 lg:px-6">
                 <h2 className="mb-6 text-3xl font-bold">Contate-nos</h2>
                 <p className="mb-6 text-neutral-500 dark:text-neutral-300">
-                  Preencha este formulário com qualquer informação que considere
-                  importante para nós saber e entraremos em contato normalmente
-                  dentro de algumas horas.
+                  Pronto para levar a sua presença online para o próximo nível
+                  em Portugal? Preencha este formulário com qualquer informação
+                  que considere importante para nós saber e entraremos em
+                  contato normalmente dentro de algumas horas. Descubra como a
+                  nossa empresa de desenvolvimento de aplicações móveis e design
+                  web pode impulsionar o seu sucesso hoje mesmo!
                 </p>
-
                 <p className="mb-2 text-neutral-500 dark:text-neutral-300">
                   + 351 911 561 225
                 </p>
