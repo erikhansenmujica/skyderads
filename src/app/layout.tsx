@@ -26,10 +26,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Script
+        id="gtag"
         async
         src="https://www.googletagmanager.com/gtag/js?id=AW-638912286"
       ></Script>
-      <Script>
+      <Script id="gtag-action">
         {`window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
