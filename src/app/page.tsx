@@ -10,10 +10,11 @@ import { AppHeader } from "./components/Headers/AppHeader";
 export default function Home() {
   const contactRef = React.useRef<HTMLDivElement>(null);
   const servicesRef = React.useRef<HTMLDivElement>(null);
+  const firstScrollRef = React.useRef<HTMLDivElement>(null);
   return (
     <div className="h-full flex flex-col justify-center items-center">
       <AppHeader contactRef={contactRef} servicesRef={servicesRef} />
-      <LogoParallax />
+      <LogoParallax firstScrollRef={firstScrollRef} />
       <p className="invisible">
         Bem-vindo à nossa agência líder em Portugal, especializada em
         desenvolvimento de aplicações móveis e design web. Na nossa empresa,
@@ -40,7 +41,10 @@ export default function Home() {
         confiança para todas as suas necessidades digitais em Portugal.
       </p>
       <div className="h-screen"></div>
-      <MessagesInBetween text="Bem-vindo à Skyder, o seu parceiro definitivo para o sucesso digital em Portugal!" />
+      <MessagesInBetween
+        firstScrollRef={firstScrollRef}
+        text="Bem-vindo à Skyder, o seu parceiro definitivo para o sucesso digital em Portugal!"
+      />
       <div className="h-full z-10">
         <video src="publicidade.mp4" autoPlay muted loop></video>
       </div>
