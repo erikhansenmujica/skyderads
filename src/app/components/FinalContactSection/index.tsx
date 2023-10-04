@@ -41,12 +41,9 @@ export const FinalContactSection = ({ contactRef }: FinalContactSection) => {
         setLoading(false);
         setError(false);
         setSuccess(true);
-        // @ts-ignore
-        window.dataLayer = window.dataLayer || [];
-        // @ts-ignore
-        window.dataLayer.push({
-          event: "formSubmission",
-          formId: "Client Lead",
+        //@ts-ignore
+        gtag("event", "conversion", {
+          send_to: "AW-638912286/gQFoCOmXxugYEJ6O1LAC",
         });
       })
       .catch((error) => {
