@@ -14,6 +14,12 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      animation: {
+        pulse1: "pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+      },
+      boxShadow: {
+        "3xl": "0 15px 100px -15px rgba(45,212,191, 1)",
+      },
     },
   },
   plugins: [],
