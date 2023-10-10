@@ -6,7 +6,7 @@ import { MessagesInBetween } from "../components/General/MessagesInBetween";
 import { LogoParallax } from "../components/Parallaxs/LogoParallax";
 import { Title } from "../components/Title";
 import { SubtitlesComesIn } from "../components/SubtitleComesIn";
-import { isVisibleHook } from "@/hooks/isVisibleHook";
+import { useIsVisibleHook } from "@/hooks/isVisibleHook";
 import { FullScreenDiv } from "../components/FullScreenDiv";
 import { FullScreenVideo } from "../components/FullScreenVideo";
 import { useTranslation } from "@/app/i18n/client";
@@ -28,7 +28,7 @@ export default function Page({ params: { lng } }: HomeProps) {
   const contactRef = React.useRef<HTMLDivElement>(null);
   const firstScrollRef = React.useRef<HTMLDivElement>(null);
   const servicesRef = React.useRef<HTMLDivElement>(null);
-  const isVisible = isVisibleHook();
+  const isVisible = useIsVisibleHook();
   const { t } = useTranslation(lng, "titlesandsubtitles");
   return (
     <div className="h-full flex flex-col justify-center items-center">
