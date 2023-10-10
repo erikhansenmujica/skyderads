@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-export const animatedCardHooks = () => {
+export const useAnimatedCardHooks = () => {
   const [videoErik, setErikVideo] = useState<string>("");
   const [videoLars, setLarsVideo] = useState<string>("");
 

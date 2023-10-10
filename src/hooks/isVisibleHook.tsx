@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 
-export const isVisibleHook = () => {
+export const useIsVisibleHook = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
   useEffect(() => {
     const timeout = setTimeout(() => {

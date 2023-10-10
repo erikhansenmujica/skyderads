@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AnimatedCards } from "../AnimatedCards";
-import { animatedCardHooks } from "@/hooks/animatedCardHook";
+import { useAnimatedCardHooks } from "@/hooks/animatedCardHook";
 import { useTranslation } from "@/app/i18n/client";
 
 interface AboutUsProps {
@@ -8,7 +8,7 @@ interface AboutUsProps {
 }
 export const AboutUs = ({ lng }: AboutUsProps) => {
   const { videoErik, videoLars, videochanger, setErikVideo, setLarsVideo } =
-    animatedCardHooks();
+    useAnimatedCardHooks();
   const { t } = useTranslation(lng, "aboutus");
   return (
     <section className="flex-1 w-full py-10 bg-black py-16 text-gray-100 z-10">

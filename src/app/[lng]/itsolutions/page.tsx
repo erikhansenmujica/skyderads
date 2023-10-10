@@ -9,7 +9,7 @@ import { Title } from "../components/Title";
 import { ScrollDownMessage } from "../components/ScrollDownMessage";
 import { SubtitlesComesIn } from "../components/SubtitleComesIn";
 import { MetaDesc } from "../components/MetaDesc";
-import { isVisibleHook } from "@/hooks/isVisibleHook";
+import { useIsVisibleHook } from "@/hooks/isVisibleHook";
 import { FullScreenDiv } from "../components/FullScreenDiv";
 import { Separator } from "../components/Separator";
 import { useTranslation } from "@/app/i18n/client";
@@ -29,7 +29,7 @@ export default function Page({ params: { lng } }: HomeProps) {
   const contactRef = useRef<HTMLDivElement>(null);
   const servicesRef = useRef<HTMLDivElement>(null);
   const firstScrollRef = useRef<HTMLDivElement>(null);
-  const isVisible = isVisibleHook();
+  const isVisible = useIsVisibleHook();
 
   return (
     <div className="h-full flex flex-col justify-center items-center">
