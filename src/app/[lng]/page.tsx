@@ -3,7 +3,7 @@ import React from "react";
 import { LogoParallax } from "./components/Parallaxs/LogoParallax";
 import { useRouter } from "next/navigation";
 import { MetaDesc } from "./components/MetaDesc";
-import { isVisibleHook } from "@/hooks/isVisibleHook";
+import { useIsVisibleHook } from "@/hooks/isVisibleHook";
 import { useTranslation } from "../i18n/client";
 import { Footer } from "./components/Footers/ClientFooter";
 import { FullScreenVideo } from "./components/FullScreenVideo";
@@ -23,7 +23,7 @@ const Home = ({ params: { lng } }: HomeProps) => {
   const goToPageComponent = (which: string) => {
     router.push(which);
   };
-  const isVisible = isVisibleHook();
+  const isVisible = useIsVisibleHook();
   const { t } = useTranslation(lng, "titlesandsubtitles");
   return (
     <div
