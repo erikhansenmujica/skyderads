@@ -18,7 +18,7 @@ export const VideoTitleTranslate = ({
 
   return (
     <div className="relative">
-      <video autoPlay muted loop className="h-[200px]">
+      <video autoPlay playsInline muted loop className="h-[200px]">
         <source src={video} type="video/mp4" />
       </video>
       <p

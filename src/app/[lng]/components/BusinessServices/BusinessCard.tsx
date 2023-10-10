@@ -41,7 +41,7 @@ export const BusinessCard = ({
       className={`cursor-pointer p-6 sm:rounded-lg shadow-md text-white bg-gradient-to-b from-blue-500 to-teal-400 sm:transform sm:transition sm:duration-500 sm:hover:scale-105 ${
         isCollapsed ? "max-h-16 overflow-hidden" : "max-h-screen"
       }`}
-      onClick={() => handleClick(contactRef)}
+      // onClick={() => handleClick(contactRef)}
     >
       <h3 className="text-xl font-semibold mb-2" onClick={toggleCollapse}>
         {title}
