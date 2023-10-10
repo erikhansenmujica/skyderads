@@ -41,7 +41,7 @@ export const AnimatedCards = ({
       ></Image>
       {video && (
         <video
-          className={`absolute top-0 ${commonclass}`}
+          className={`absolute top-0 ${commonclass} min-w-[300px] min-h-[300px]`}
           autoPlay
           loop
           onMouseOver={(event) => {
