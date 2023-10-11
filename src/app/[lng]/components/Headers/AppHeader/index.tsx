@@ -17,24 +17,24 @@ export const AppHeader = ({ contactRef, servicesRef, lng }: AppHeaderProps) => {
 
   return (
     <header className="flex w-screen text-1xl text-white justify-between mt-9">
-      <Link href={"/"} className="self-start">
+      <Link href={"/"} className="flex-1  self-start">
         <button
           onClick={() => handleClick(contactRef)}
-          className="w-40 h-14 text-2xl flex justify-center items-center transition-colors rounded duration-350 ease-in-out  hover:bg-white hover:text-black"
+          className="sm:w-40 h-14 text-2xl flex justify-center items-center transition-colors rounded duration-350 ease-in-out  hover:bg-white hover:text-black"
         >
           <AiOutlineHome />
         </button>
       </Link>
-      <div>
+      <div className="flex-1 flex justify-between sm:justify-end ">
         <button
           onClick={() => handleClick(contactRef)}
-          className="w-40 h-14  transition-colors rounded duration-350 ease-in-out  hover:bg-white hover:text-black"
+          className="sm:w-40 h-14  transition-colors rounded duration-350 ease-in-out  hover:bg-white hover:text-black"
         >
           {t("contact")}
         </button>
         <button
           onClick={() => handleClick(servicesRef)}
-          className="w-40 h-14 text-1xl  transition-colors rounded duration-350 ease-in-out  hover:bg-white hover:text-black"
+          className="sm:w-40 h-14 text-1xl  transition-colors rounded duration-350 ease-in-out  hover:bg-white hover:text-black"
         >
           {t("services")}
         </button>

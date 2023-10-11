@@ -21,14 +21,14 @@ export const BusinessCard = ({
   //     <b>{price ? price : ""}</b>
   //   </p>
   // </div>
-  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isCollapsed, setIsCollapsed] = useState(false);
   const handleClick = (ref: React.RefObject<HTMLDivElement>) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
   useEffect(() => {
     // Check screen width and set initial state
     const screenWidth = window.innerWidth;
-    setIsCollapsed(screenWidth <= 640); // Adjust the breakpoint as needed
+    // setIsCollapsed(screenWidth <= 640); // Adjust the breakpoint as needed
   }, []);
 
   const toggleCollapse = () => {
