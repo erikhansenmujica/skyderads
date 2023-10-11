@@ -22,7 +22,8 @@
     "react": "latest",
     "react-cookie": "^6.1.1",
     "react-dom": "latest",
-    "react-i18next": "^13.2.2"
+    "react-i18next": "^13.2.2",
+    "react-icons": "^4.11.0"
   },
   "devDependencies": {
     "@types/node": "latest",

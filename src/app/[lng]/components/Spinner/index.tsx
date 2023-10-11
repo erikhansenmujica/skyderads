@@ -1,5 +1,9 @@
-export const Spinner = () => (
-  <div role="status">
+interface SpinnerProps {
+  className?: string;
+}
+
+export const Spinner = ({ className }: SpinnerProps) => (
+  <div role="status" className={className ? className : ""}>
     <svg
       aria-hidden="true"
       className="inline w-10 h-10 mr-2 text-white animate-spin dark:text-teal-200 fill-blue-500"
