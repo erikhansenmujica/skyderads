@@ -44,18 +44,33 @@ export const MessagesInBetween = ({
           }
         >
           {highlightwords
-            ? words.map((word) => {
+            ? words.map((word, i) => {
                 const className =
                   "font-black bg-clip-text bg-gradient-to-r text-transparent from-blue-500 to-teal-400";
                 if (highlightwords.includes(word)) {
                   if (words.indexOf(word) === 0) {
-                    return <span className={className}>{word} </span>;
+                    return (
+                      <span className={className} key={i}>
+                        {word}{" "}
+                      </span>
+                    );
                   } else if (
                     highlightwords.indexOf(word) ===
                     highlightwords.length - 1
                   ) {
-                    return <span className={className}> {word}</span>;
-                  } else return <span className={className}> {word} </span>;
+                    return (
+                      <span key={i} className={className}>
+                        {" "}
+                        {word}
+                      </span>
+                    );
+                  } else
+                    return (
+                      <span key={i} className={className}>
+                        {" "}
+                        {word}{" "}
+                      </span>
+                    );
                 } else
                   return words.indexOf(word) === 0
                     ? word + " "
