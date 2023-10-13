@@ -11,5 +11,9 @@
   "espublicity": "PUBLICIDAD",
   "esproduct": "VIDEO PRODUCTO",
   "esservice": "VIDEO SERVICIO",
-  "whatyoulookinat": "Hola! ¿Qué estás buscando?"
+  "whatyoulookinat": "Hola! ¿Qué estás buscando?",
+  "esLANDINGS": "LANDINGS",
+  "esFORMS": "FORMS",
+  "esMOBILEAPPS": "MOBILE APPS",
+  "esWEBAPPS": "WEB APPS"
 }

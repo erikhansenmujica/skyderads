@@ -11,5 +11,9 @@
   "enpublicity": "PUBLICITY",
   "enproduct": "PRODUCT VIDEO",
   "enservice": "SERVICE VIDEO",
-  "whatyoulookinat": "Hello! What are you looking for?"
+  "whatyoulookinat": "Hello! What are you looking for?",
+  "enLANDINGS": "LANDINGS",
+  "enFORMS": "FORMS",
+  "enMOBILEAPPS": "MOBILE APPS",
+  "enWEBAPPS": "WEB APPS"
 }

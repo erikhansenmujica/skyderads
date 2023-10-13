@@ -17,6 +17,8 @@ import { Footer } from "../components/Footers/ClientFooter";
 import Image from "next/image";
 import { AnimatedCards } from "../components/AnimatedCards";
 import { AboutUs } from "../components/AboutUs";
+import { FullScreenVideo } from "../components/FullScreenVideo";
+import { VideoTitleTranslate } from "../components/VideoTitleTranslate";
 
 interface HomeProps {
   params: {
@@ -52,8 +54,34 @@ export default function Page({ params: { lng } }: HomeProps) {
         firstScrollRef={firstScrollRef}
         text={t("welcometoskyder")}
       />
-      <Separator />
-      <AboutUs lng={lng} />
+      <FullScreenVideo video="">
+        <div className="flex flex-wrap font-bold justify-center">
+          <VideoTitleTranslate
+            lng={lng}
+            video="/content/landings.mp4"
+            text={t("LANDINGS")}
+            height="h-[189px]"
+          />
+          <VideoTitleTranslate
+            lng={lng}
+            video="/content/forms.mp4"
+            height="h-[189px]"
+            text={t("FORMS")}
+          />
+          <VideoTitleTranslate
+            lng={lng}
+            video="/content/mobileapps.mp4"
+            height="h-[189px]"
+            text={t("MOBILEAPPS")}
+          />
+          <VideoTitleTranslate
+            lng={lng}
+            video="/content/apps.mp4"
+            height="h-[189px]"
+            text={t("WEBAPPS")}
+          />
+        </div>
+      </FullScreenVideo>
       <BusinessServices
         contactRef={contactRef}
         servicesRef={servicesRef}

@@ -75,11 +75,11 @@ export default function Page({ params: { lng } }: HomeProps) {
           />
         </div>
       </FullScreenVideo>
-
       <MessagesInBetween
         firstScrollRef={firstScrollRef}
         text={t("youtubeplaylist")}
       />
+
       <FullScreenVideo video="">
         <div className="flex-col justify-center justify-items-center content-center flex my-8 items-center">
           <YoutubePlaylist
@@ -94,6 +94,29 @@ export default function Page({ params: { lng } }: HomeProps) {
               {t("allourvideos")}
             </h1>
           </Link>
+        </div>
+      </FullScreenVideo>
+      <MessagesInBetween
+        firstScrollRef={firstScrollRef}
+        text={t("New AI powered video editing")}
+        gradienttext
+        size="2xl"
+        highlightwords={["AI"]}
+      />
+      <FullScreenVideo video="">
+        <div className="flex flex-wrap font-bold justify-center">
+          <VideoTitleTranslate
+            text=""
+            video="/content/muestraIA1.mp4"
+            lng={lng}
+            height="h-[400px]"
+          />
+          <VideoTitleTranslate
+            text=""
+            video="/content/muestraIA2.mp4"
+            lng={lng}
+            height="h-[400px]"
+          />
         </div>
       </FullScreenVideo>
       <BusinessServices

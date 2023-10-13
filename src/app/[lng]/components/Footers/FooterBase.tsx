@@ -9,13 +9,13 @@ interface FooterBaseProps {
 
 export const FooterBase = ({ t, lng }: FooterBaseProps) => {
   return (
-    <footer className="flex-1 w-full py-5  w-full py-4 z-10">
+    <footer className="flex-1 w-full pt-[60px] sm:pt-[90px] md:pt-[120px] lg:pt-[85px]  w-full  z-10">
       <div className="container mx-auto text-center">
         <p className="text-gray-100">
           &copy; {new Date().getFullYear()} Skyder
         </p>
       </div>
-      <div className="flex justify-center   w-screen">
+      <div className="flex justify-center w-screen">
         <Trans i18nKey="languageSwitcher" t={t}>
           <span className="text-white mx-1">
             Switch from <strong>{lng}</strong> to:{" "}

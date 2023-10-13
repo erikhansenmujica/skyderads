@@ -40,7 +40,7 @@ const Home = ({ params: { lng } }: HomeProps) => {
 
   return (
     <div
-      className={`${calibri.className} h-full flex flex-col justify-center items-center`}
+      className={`${calibri.className} flex flex-col justify-center items-center`}
     >
       <div className="relative top-0 ">
         {banner && (
@@ -67,7 +67,7 @@ const Home = ({ params: { lng } }: HomeProps) => {
               onClick={() => goToPageComponent(`/${lng}/itsolutions`)}
               className={`animate-pulse1  ${
                 isVisible && !loader ? "animate-fade-in" : "hidden"
-              } border-white border-2 p-6 text-white hover:text-black hover:bg-white
+              } border-white border-2 rounded-xl p-6 text-white hover:text-black hover:bg-white
               w-[220px] max-w-[220px] md:m-6
             `}
             >
@@ -77,7 +77,7 @@ const Home = ({ params: { lng } }: HomeProps) => {
               onClick={() => goToPageComponent(`/${lng}/digitalcontent`)}
               className={`animate-pulse1 ${
                 isVisible && !loader ? "animate-fade-in" : "hidden"
-              } border-white border-2 p-6 text-white hover:text-black hover:bg-white
+              } border-white border-2 rounded-xl p-6 text-white hover:text-black hover:bg-white
             w-[220px] max-w-[220px] md:m-6
             `}
             >
@@ -88,7 +88,6 @@ const Home = ({ params: { lng } }: HomeProps) => {
         <Spinner className={loader ? "" : "invisible"} />
       </div>
       <MetaDesc lng={lng} />
-      <div className="h-screen"></div>
       <Footer lng={lng} />
     </div>
   );

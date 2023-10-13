@@ -95,12 +95,12 @@ export const FinalContactSection = ({
                 </div>
               </div>
 
-              <div className="mb-12 w-full rounded-1xl bg-gradient-to-r from-blue-500 to-teal-400 shrink-0 grow-0 basis-auto md:mb-0 md:w-6/12 md:px-3 lg:px-6 flex flex-col justify-center">
+              <div className="mb-12 w-full rounded-xl bg-gradient-to-r from-blue-500 to-teal-400 shrink-0 grow-0 basis-auto md:mb-0 md:w-6/12 md:px-3 lg:px-6 flex flex-col justify-center">
                 {loading ? (
                   <Spinner />
                 ) : (
                   <form
-                    className="m-12"
+                    className="m-12 "
                     onChange={onChange}
                     ref={form}
                     onSubmit={sendEmail}
