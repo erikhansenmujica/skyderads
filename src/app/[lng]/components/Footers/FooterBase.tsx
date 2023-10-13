@@ -9,7 +9,7 @@ interface FooterBaseProps {
 
 export const FooterBase = ({ t, lng }: FooterBaseProps) => {
   return (
-    <footer className="flex-1 w-full pt-[60px] sm:pt-[90px] md:pt-[120px] lg:pt-[85px]  w-full  z-10">
+    <footer className="flex-1 w-full pt-[60px] sm:pt-[90px] md:pt-[120px] lg:pt-[85px] bg-black w-full  z-10">
       <div className="container mx-auto text-center">
         <p className="text-gray-100">
           &copy; {new Date().getFullYear()} Skyder
