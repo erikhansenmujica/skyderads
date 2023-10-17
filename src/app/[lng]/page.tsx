@@ -39,9 +39,7 @@ const Home = ({ params: { lng } }: HomeProps) => {
   }, []);
 
   return (
-    <div
-      className={`${calibri.className} flex flex-col justify-center items-center`}
-    >
+    <div className={`${calibri.className}`}>
       <div className="relative top-0 ">
         {banner && (
           <video autoPlay playsInline muted loop>
@@ -62,7 +60,7 @@ const Home = ({ params: { lng } }: HomeProps) => {
           >
             {t("whatyoulookinat")}
           </h1>
-          <div className="flex wrap justify-center">
+          <div className="flex wrap justify-center z-[12]">
             <button
               onClick={() => goToPageComponent(`/${lng}/itsolutions`)}
               className={`animate-pulse1  ${
@@ -88,7 +86,9 @@ const Home = ({ params: { lng } }: HomeProps) => {
         <Spinner className={loader ? "" : "invisible"} />
       </div>
       <MetaDesc lng={lng} />
-      <Footer lng={lng} />
+      <div className="mt-10">
+        <Footer lng={lng} />
+      </div>
     </div>
   );
 };
