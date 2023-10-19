@@ -39,7 +39,7 @@ const Home = ({ params: { lng } }: HomeProps) => {
   }, []);
 
   return (
-    <div className={`${calibri.className}`}>
+    <div className={`${calibri.className} `}>
       <div className="relative top-0 ">
         {banner && (
           <video autoPlay playsInline muted loop>
@@ -86,7 +86,7 @@ const Home = ({ params: { lng } }: HomeProps) => {
         <Spinner className={loader ? "" : "invisible"} />
       </div>
       <MetaDesc lng={lng} />
-      <div className="mt-10">
+      <div className="mt-[12vh]">
         <Footer lng={lng} />
       </div>
     </div>
