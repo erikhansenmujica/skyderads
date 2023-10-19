@@ -49,7 +49,7 @@ export const FinalContactSection = ({
           setSuccess(true);
           //@ts-ignore
           gtag("event", "conversion", {
-            send_to: "AW-638912286/gQFoCOmXxugYEJ6O1LAC",
+            send_to: "AW-11378863259/NFK-CI69oe4YEJvZ7rEq",
           });
         })
         .catch((error) => {
