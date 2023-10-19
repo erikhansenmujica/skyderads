@@ -37,13 +37,15 @@ export default function RootLayout({
       <Script
         id="gtag"
         async
-        src="https://www.googletagmanager.com/gtag/js?id=AW-638912286"
+        src="https://www.googletagmanager.com/gtag/js?id=AW-11378863259"
       ></Script>
       <Script id="gtag-action">
-        {`window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'AW-638912286');`}
+        {`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-11378863259');
+`}
       </Script>
       <body className={inter.className}>{children}</body>
     </html>
