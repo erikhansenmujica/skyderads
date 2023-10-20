@@ -98,10 +98,10 @@ export default function Page({ params: { lng } }: HomeProps) {
       </FullScreenVideo>
       <MessagesInBetween
         firstScrollRef={firstScrollRef}
-        text={t("New AI powered video editing")}
+        text={t("newAIpoweredvideoediting")}
         gradienttext
         size="2xl"
-        highlightwords={["AI"]}
+        highlightwords={[t("AI")]}
       />
       <FullScreenVideo video="">
         <div className="flex flex-wrap font-bold justify-center">
