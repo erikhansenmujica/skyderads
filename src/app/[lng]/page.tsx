@@ -95,8 +95,8 @@ const Home = ({ params: { lng } }: HomeProps) => {
       <div className="mt-[12vh]">
         <Footer lng={lng} />
       </div>
-      <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-      <div className="elfsight-app-839c650c-48f3-4599-9175-328b6d45e507 "></div>
+      {/* <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+      <div className="elfsight-app-839c650c-48f3-4599-9175-328b6d45e507 "></div> */}
     </div>
   );
 };

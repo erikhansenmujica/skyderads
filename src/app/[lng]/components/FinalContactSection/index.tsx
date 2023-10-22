@@ -188,6 +188,22 @@ export const FinalContactSection = ({
                     >
                       {t("send")}
                     </button>
+                    <input
+                      type="text"
+                      className="hidden"
+                      id="language"
+                      name="language"
+                      placeholder="Language"
+                      value={lng}
+                    />
+                    <input
+                      type="text"
+                      className="hidden"
+                      id="section"
+                      name="section"
+                      placeholder="Email address"
+                      value={section}
+                    />
                   </form>
                 )}
               </div>
