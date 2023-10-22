@@ -27,7 +27,11 @@ export default function Page({ params: { lng } }: HomeProps) {
       <AboutUs lng={lng} />
 
       <MessagesInBetween size="1xl" text={t("wearepassionate")} />
-      <FinalContactSection lng={lng} contactRef={contactRef} />
+      <FinalContactSection
+        section="aboutus"
+        lng={lng}
+        contactRef={contactRef}
+      />
       <Footer lng={lng} />
     </div>
   );

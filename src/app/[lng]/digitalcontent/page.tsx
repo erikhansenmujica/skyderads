@@ -127,7 +127,11 @@ export default function Page({ params: { lng } }: HomeProps) {
         contactRef={contactRef}
       />
       <MessagesInBetween size="2xl" text={t("wearepassionate")} />
-      <FinalContactSection lng={lng} contactRef={contactRef} />
+      <FinalContactSection
+        section="audiovisuals"
+        lng={lng}
+        contactRef={contactRef}
+      />
       <Footer lng={lng} />
     </div>
   );

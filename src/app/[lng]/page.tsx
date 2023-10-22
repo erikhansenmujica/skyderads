@@ -20,6 +20,7 @@ interface HomeProps {
 const Home = ({ params: { lng } }: HomeProps) => {
   const router = useRouter();
   const [loader, setLoader] = React.useState(false);
+
   const goToPageComponent = (which: string) => {
     setLoader(true);
     router.push(which);
@@ -28,8 +29,13 @@ const Home = ({ params: { lng } }: HomeProps) => {
   const [banner, setBanner] = useState<string>("");
   const { t } = useTranslation(lng, "titlesandsubtitles");
   useEffect(() => {
-    // Check screen width and set initial state
     const screenWidth = window.innerWidth;
+    // //accounts.google.com/o/oauth2/v2/auth?client_id=207407249076-dphnj1eovocp645q3dkjn917c2fsfiao.apps.googleusercontent.com&response_type=code&scope=https://www.googleapis.com/auth/business.manage&redirect_uri=https://skyderby.pt/api/google/mybusiness
+    // fetch(
+    //   "https://accounts.google.com/o/oauth2/v2/auth?client_id=207407249076-dphnj1eovocp645q3dkjn917c2fsfiao.apps.googleusercontent.com&response_type=code&scope=https://www.googleapis.com/auth/business.manage&redirect_uri=https://skyderby.pt/api/google/mybusiness",
+    //   // "https://mybusiness.googleapis.com/v4/accounts/112699919233639542596/locations/ChIJVZM-Xn0HWaoRpI_UvuEvFK8/reviews"
+    //   { mode: "no-cors" }
+    // ).then((res) => console.log(res));
     setBanner(
       screenWidth <= 640
         ? "/content/bannermobile.mp4"
@@ -89,6 +95,8 @@ const Home = ({ params: { lng } }: HomeProps) => {
       <div className="mt-[12vh]">
         <Footer lng={lng} />
       </div>
+      <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+      <div className="elfsight-app-839c650c-48f3-4599-9175-328b6d45e507 "></div>
     </div>
   );
 };
