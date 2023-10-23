@@ -86,7 +86,7 @@ export const FinalContactSection = ({
                   + 351 911 561 225
                 </p>
                 <p className="mb-2 text-neutral-500 dark:text-neutral-300">
-                  skyderadvertising@gmail.com
+                  skyderdigital@gmail.com
                 </p>
                 <div className="w-full flex justify-center">
                   <Image
