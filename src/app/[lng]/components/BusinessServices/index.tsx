@@ -29,12 +29,17 @@ export const BusinessServices = ({
         {it ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-[10%] gap-2  sm:gap-6 ">
             <BusinessCard
+              title={t("titleit4")}
+              content={t("descit4")}
+              price={t("priceit3")}
+              contactRef={contactRef}
+            />
+            <BusinessCard
               title={t("titleit1")}
               content={t("descit1")}
               price={t("priceit1")}
               contactRef={contactRef}
             />
-
             <BusinessCard
               title={t("titleit2")}
               content={t("descit2")}
