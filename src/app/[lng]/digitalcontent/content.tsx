@@ -45,7 +45,6 @@ export function Content({ params: { lng } }: HomeProps) {
         isVisible={isVisible}
         text={t("digitalcontentsubtitle")}
       />
-      <MetaDesc lng={lng} />
       <FullScreenDiv />
       <MessagesInBetween
         firstScrollRef={firstScrollRef}

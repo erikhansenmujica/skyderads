@@ -44,7 +44,6 @@ export const Content = ({ params: { lng } }: HomeProps) => {
         firstScrollRef={firstScrollRef}
         isVisible={isVisible}
       />
-      <MetaDesc lng={lng} />
       <FullScreenDiv />
       <MessagesInBetween
         firstScrollRef={firstScrollRef}
