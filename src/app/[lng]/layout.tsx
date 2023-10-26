@@ -33,8 +33,7 @@ export async function generateMetadata(props: HomeProps): Promise<Metadata> {
     },
     metadataBase: new URL("https://skyderdigital.com"),
     verification: {
-      google:
-        "google-site-verification=Oo_6jAoHQzYV4P5UpM-TDI99dFhfcEro7Tfokc6VOHU",
+      google: "Oo_6jAoHQzYV4P5UpM-TDI99dFhfcEro7Tfokc6VOHU",
     },
   };
 }
