@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import Script from "next/script";
 import { dir } from "i18next";
 import { languages } from "../i18n/settings";
-import { useTranslation } from "../i18n";
+import { serverUseTranslation } from "../i18n";
 
 export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
@@ -17,7 +17,10 @@ interface HomeProps {
 const inter = Inter({ subsets: ["latin"] });
 
 export async function generateMetadata(props: HomeProps): Promise<Metadata> {
-  const { t } = await useTranslation(props.params.lng, "titlesandsubtitles");
+  const { t } = await serverUseTranslation(
+    props.params.lng,
+    "titlesandsubtitles"
+  );
   return {
     title: t("maintitle"),
     description: t("maindesc"),

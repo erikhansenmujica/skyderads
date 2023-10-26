@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { Content } from "./content";
-import { useTranslation } from "@/app/i18n";
+import { serverUseTranslation } from "@/app/i18n";
 
 interface HomeProps {
   params: {
@@ -9,7 +9,10 @@ interface HomeProps {
 }
 
 export async function generateMetadata(props: HomeProps): Promise<Metadata> {
-  const { t } = await useTranslation(props.params.lng, "titlesandsubtitles");
+  const { t } = await serverUseTranslation(
+    props.params.lng,
+    "titlesandsubtitles"
+  );
   return {
     title: t("ittitle"),
     description: t("itsubtitle"),
