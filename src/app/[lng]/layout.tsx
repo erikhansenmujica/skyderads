@@ -4,24 +4,36 @@ import { Inter } from "next/font/google";
 import Script from "next/script";
 import { dir } from "i18next";
 import { languages } from "../i18n/settings";
+import { useTranslation } from "../i18n";
 
 export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
 }
-
+interface HomeProps {
+  params: {
+    lng: string;
+  };
+}
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title:
-    "Desenvolvimento de Aplicações Móveis e Web em Portugal | Empresa Líder",
-  description:
-    "Somos uma agência especializada em desenvolvimento de aplicações móveis e design web em Portugal. Oferecemos serviços de desenvolvimento de aplicações Android e iOS, design web responsivo e produção de conteúdo audiovisual em Portugal. Entre em contato hoje mesmo para melhorar sua presença online!",
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/faviconlogo.png",
-    apple: "/faviconlogo.png",
-  },
-};
+export async function generateMetadata(props: HomeProps): Promise<Metadata> {
+  const { t } = await useTranslation(props.params.lng, "titlesandsubtitles");
+  return {
+    title: t("maintitle"),
+    description: t("maindesc"),
+    keywords: t("mainkeywords"),
+    icons: {
+      icon: "/favicon.ico",
+      shortcut: "/faviconlogo.png",
+      apple: "/faviconlogo.png",
+    },
+    metadataBase: new URL("https://skyderdigital.com"),
+    verification: {
+      google:
+        "google-site-verification=Oo_6jAoHQzYV4P5UpM-TDI99dFhfcEro7Tfokc6VOHU",
+    },
+  };
+}
 
 export default function RootLayout({
   children,
