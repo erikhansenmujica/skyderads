@@ -21,9 +21,10 @@ export async function generateMetadata(props: HomeProps): Promise<Metadata> {
     props.params.lng,
     "titlesandsubtitles"
   );
+  const metadata = await serverUseTranslation(props.params.lng, "metadata");
   return {
     title: t("maintitle"),
-    description: t("maindesc"),
+    description: metadata.t("metadescription"),
     keywords: t("mainkeywords"),
     icons: {
       icon: "/favicon.ico",
