@@ -17,5 +17,11 @@ export default async function sitemap() {
       },
     ])
     .flat();
-  return [...routes];
+  return [
+    ...routes,
+    {
+      url: `${URL}/`,
+      lastModified: new Date().toISOString(),
+    },
+  ];
 }
