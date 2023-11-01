@@ -5,12 +5,18 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { AiOutlineHome } from "react-icons/ai";
 interface AppHeaderProps {
-  contactRef: React.RefObject<HTMLDivElement>;
-  servicesRef: React.RefObject<HTMLDivElement>;
+  contactRef?: React.RefObject<HTMLDivElement>;
+  servicesRef?: React.RefObject<HTMLDivElement>;
   lng: string;
+  main?: boolean;
 }
 
-export const AppHeader = ({ contactRef, servicesRef, lng }: AppHeaderProps) => {
+export const AppHeader = ({
+  contactRef,
+  servicesRef,
+  lng,
+  main,
+}: AppHeaderProps) => {
   const handleClick = (ref: React.RefObject<HTMLDivElement>) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -41,18 +47,27 @@ export const AppHeader = ({ contactRef, servicesRef, lng }: AppHeaderProps) => {
         } duration-300 ease-in-out
          `}
         >
-          <button
-            onClick={() => handleClick(contactRef)}
-            className="sm:w-40 h-14 border-2 rounded-1xl border-white  transition-colors rounded duration-350 ease-in-out  hover:bg-white hover:text-black"
-          >
-            {t("contact")}
-          </button>
-          <button
-            onClick={() => handleClick(servicesRef)}
-            className="sm:w-40 h-14 text-1xl rounded-1xl border-2 border-white   transition-colors rounded duration-350 ease-in-out  hover:bg-white hover:text-black"
-          >
-            {t("services")}
-          </button>
+          {contactRef ? (
+            <button
+              onClick={() => handleClick(contactRef)}
+              className="sm:w-40 h-14 border-2 rounded-1xl border-white  transition-colors rounded duration-350 ease-in-out  hover:bg-white hover:text-black"
+            >
+              {t("contact")}
+            </button>
+          ) : (
+            <div className="hidden" />
+          )}
+          {servicesRef ? (
+            <button
+              onClick={() => handleClick(servicesRef)}
+              className="sm:w-40 h-14 text-1xl rounded-1xl border-2 border-white   transition-colors rounded duration-350 ease-in-out  hover:bg-white hover:text-black"
+            >
+              {t("services")}
+            </button>
+          ) : (
+            <div className="hidden" />
+          )}
+
           <Link href={"/aboutus"} className="">
             <button className="sm:w-40 px-12 h-14 text-1xl rounded-1xl border-2 border-white  transition-colors rounded duration-350 ease-in-out  hover:bg-white hover:text-black">
               {t("aboutus")}
@@ -99,20 +114,32 @@ export const AppHeader = ({ contactRef, servicesRef, lng }: AppHeaderProps) => {
         </button>
       </div>
       <div className="flex-1  hidden sm:flex justify-between sm:justify-end ">
-        <button
-          onClick={() => handleClick(contactRef)}
-          className="sm:w-40 h-14  transition-colors rounded duration-350 ease-in-out  hover:bg-white hover:text-black"
-        >
-          {t("contact")}
-        </button>
-        <button
-          onClick={() => handleClick(servicesRef)}
-          className="sm:w-40 h-14 text-1xl  transition-colors rounded duration-350 ease-in-out  hover:bg-white hover:text-black"
-        >
-          {t("services")}
-        </button>
+        {contactRef ? (
+          <button
+            onClick={() => handleClick(contactRef)}
+            className="sm:w-40 h-14  transition-colors rounded duration-350 ease-in-out  hover:bg-white hover:text-black"
+          >
+            {t("contact")}
+          </button>
+        ) : (
+          <div className="hidden" />
+        )}
+        {servicesRef ? (
+          <button
+            onClick={() => handleClick(servicesRef)}
+            className="sm:w-40 h-14 text-1xl  transition-colors rounded duration-350 ease-in-out  hover:bg-white hover:text-black"
+          >
+            {t("services")}
+          </button>
+        ) : (
+          <div className="hidden" />
+        )}
         <Link href={"/aboutus"}>
-          <button className="sm:w-40 h-14 text-1xl  transition-colors rounded duration-350 ease-in-out  hover:bg-white hover:text-black">
+          <button
+            className={`sm:w-40 h-14 text-1xl ${
+              main ? "border-white border-2 bg-black" : ""
+            } transition-colors rounded duration-350 ease-in-out  hover:bg-white hover:text-black`}
+          >
             {t("aboutus")}
           </button>
         </Link>

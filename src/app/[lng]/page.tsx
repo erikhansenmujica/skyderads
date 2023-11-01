@@ -8,6 +8,8 @@ import { useTranslation } from "../i18n/client";
 import { Footer } from "./components/Footers/ClientFooter";
 import localFont from "next/font/local";
 import { Spinner } from "./components/Spinner";
+import { AppHeader } from "./components/Headers/AppHeader";
+import { MessagesInBetween } from "./components/General/MessagesInBetween";
 
 const calibri = localFont({ src: "../../fonts/calibri-regular.ttf" });
 
@@ -46,19 +48,20 @@ const Home = ({ params: { lng } }: HomeProps) => {
 
   return (
     <div className={`${calibri.className} `}>
-      <div className="relative top-0 ">
+      <div className="absolute top-0 z-[300]">
+        <AppHeader lng={lng} main />
+      </div>
+      <div className="relative top-0">
         {banner && (
           <video autoPlay playsInline muted loop>
             <source src={banner} type="video/mp4" />
           </video>
         )}
         <div className="absolute h-full w-full background-color bg-gradient-to-t from-black to-transparent top-0" />
-        <div className="z-10">
-          <LogoParallax isVisible={false} />
-        </div>
+        <LogoParallax isVisible={false} />
       </div>
-      <div className="flex flex-col justify-center items-center h-screen w-screen align-items-center fixed top-0 z-10">
-        <div className="flex flex-col w-screen mt-[350px]">
+      <div className="flex flex-col justify-center items-center h-screen w-screen align-items-center fixed top-0 ">
+        <div className="flex flex-col w-screen mt-[60vh]">
           <h1
             className={`${
               isVisible && !loader ? "animate-fade-in" : "hidden"
@@ -66,7 +69,7 @@ const Home = ({ params: { lng } }: HomeProps) => {
           >
             {t("whatyoulookinat")}
           </h1>
-          <div className="flex wrap justify-center z-[12]">
+          <div className="flex wrap justify-center ">
             <button
               onClick={() => goToPageComponent(`/${lng}/itsolutions`)}
               className={`animate-pulse1  ${
@@ -95,6 +98,7 @@ const Home = ({ params: { lng } }: HomeProps) => {
         <Footer lng={lng} />
       </div>
       {/* <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+     
       <div className="elfsight-app-839c650c-48f3-4599-9175-328b6d45e507 "></div> */}
     </div>
   );
