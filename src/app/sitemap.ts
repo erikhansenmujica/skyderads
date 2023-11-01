@@ -1,7 +1,9 @@
-const URL = "https://www.skyderdigital.com";
+import { MetadataRoute } from "next";
 
-export default async function sitemap() {
-  const routes = ["/", "/aboutus", "/itsolutions", "/digitalcontent"]
+const URL = "https://skyderdigital.com";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const routes = ["", "/aboutus", "/itsolutions", "/digitalcontent"]
     .map((route) => [
       {
         url: `${URL}/es${route}`,
@@ -20,7 +22,7 @@ export default async function sitemap() {
   return [
     ...routes,
     {
-      url: `${URL}/`,
+      url: `${URL}`,
       lastModified: new Date().toISOString(),
     },
   ];
