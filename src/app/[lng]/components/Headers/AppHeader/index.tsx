@@ -33,11 +33,15 @@ export const AppHeader = ({
   }, []);
   return (
     <header className="flex w-screen text-1xl text-white justify-between mt-9">
-      <Link href={"/"} className="flex-1  self-start">
-        <button className="sm:w-40 h-14 text-2xl flex justify-center items-center transition-colors rounded duration-350 ease-in-out  hover:bg-white hover:text-black">
-          <AiOutlineHome />
-        </button>
-      </Link>
+      {main ? (
+        <div className="flex-1  self-start" />
+      ) : (
+        <Link href={"/"} className="flex-1  self-start">
+          <button className="sm:w-40 h-14 text-2xl flex justify-center items-center transition-colors rounded duration-350 ease-in-out  hover:bg-white hover:text-black">
+            <AiOutlineHome />
+          </button>
+        </Link>
+      )}
 
       {mobile && (
         <div
