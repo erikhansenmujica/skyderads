@@ -19,11 +19,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     ])
     .flat();
-  return [
-    ...routes,
-    {
-      url: `${URL}`,
-      lastModified: new Date().toISOString(),
-    },
-  ];
+  return [...routes];
 }
