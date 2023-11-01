@@ -12,7 +12,10 @@ export const config = {
 };
 
 export function middleware(req: any) {
-  if (req.nextUrl.pathname === "/sitemap.xml") {
+  if (
+    req.nextUrl.pathname === "/sitemap.xml" ||
+    req.nextUrl.pathname === "/qr"
+  ) {
     return NextResponse.next();
   }
   let lng;
