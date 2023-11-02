@@ -141,7 +141,7 @@ export const AppHeader = ({
         <Link href={"/aboutus"}>
           <button
             className={`sm:w-40 h-14 text-1xl ${
-              main ? "border-white border-2 bg-black mr-8" : ""
+              main ? "border-white border-2 bg-black mr-8 rounded-xl" : ""
             } transition-colors rounded duration-350 ease-in-out  hover:bg-white hover:text-black`}
           >
             {t("aboutus")}
