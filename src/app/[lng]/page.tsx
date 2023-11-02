@@ -94,7 +94,7 @@ const Home = ({ params: { lng } }: HomeProps) => {
         </div>
         <Spinner className={loader ? "" : "invisible"} />
       </div>
-      <div className="mt-[75vh] md:mt-[50vh] lg:mt-[35vh]">
+      <div className="mt-[100vh] md:mt-[50vh] lg:mt-[35vh]">
         <Footer lng={lng} />
       </div>
       {/* <script src="https://apps.elfsight.com/p/platform.js" defer></script>
