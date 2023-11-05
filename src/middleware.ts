@@ -14,7 +14,8 @@ export const config = {
 export function middleware(req: any) {
   if (
     req.nextUrl.pathname === "/sitemap.xml" ||
-    req.nextUrl.pathname === "/qr"
+    req.nextUrl.pathname === "/qr" ||
+    req.nextUrl.pathname === "/robots.txt"
   ) {
     return NextResponse.next();
   }

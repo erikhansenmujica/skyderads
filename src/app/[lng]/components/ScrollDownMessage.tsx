@@ -29,7 +29,7 @@ flex flex-col h-screen justify-center items-center color-white fixed top-0 z-10`
       {/* Arrow pointing down */}
       <div className="w-6 h-6 mb-2 mt-[55vh] z-10 color-white cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-110  duration-300">
         <svg
-          xmlns="http://www.w3.org/2000/svg"
+          xmlns="https://www.w3.org/2000/svg"
           className="h-full w-full text-1xl text-white animate-pulse"
           fill="white"
           viewBox="0 0 24 24"

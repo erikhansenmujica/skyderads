@@ -93,6 +93,7 @@ export const FinalContactSection = ({
                     src={"/logo.png"}
                     width={"150"}
                     height={"10"}
+                    priority
                     alt=""
                     className="mt-[15%]"
                   ></Image>
@@ -194,7 +195,7 @@ export const FinalContactSection = ({
                       id="language"
                       name="language"
                       placeholder="Language"
-                      value={lng}
+                      defaultValue={lng}
                     />
                     <input
                       type="text"
@@ -202,7 +203,7 @@ export const FinalContactSection = ({
                       id="section"
                       name="section"
                       placeholder="Email address"
-                      value={section}
+                      defaultValue={section}
                     />
                   </form>
                 )}

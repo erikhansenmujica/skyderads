@@ -9,7 +9,7 @@ export const YoutubePlaylist = ({ lng, src }: YoutubePlaylistProps) => {
       src={src}
       title="YouTube video player"
       className="border-black w-screen border-8 h-[250px] sm:h-[300px] sm:w-[500px]"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; "
       allowFullScreen
     ></iframe>
   );
