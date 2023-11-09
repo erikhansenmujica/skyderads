@@ -2,10 +2,16 @@
 import Image from "next/image";
 interface LogoParallaxProps {
   isVisible: boolean;
+  main: boolean;
 }
-export const LogoParallax = ({ isVisible }: LogoParallaxProps) => {
+export const LogoParallax = ({ main, isVisible }: LogoParallaxProps) => {
   return (
-    <div className="flex flex-col justify-center items-center h-screen w-screen align-items-center fixed top-0">
+    <div
+      className={
+        "flex flex-col justify-center items-center w-screen fixed top-0 " +
+        (main ? "h-[70%]" : "h-screen")
+      }
+    >
       <Image
         priority
         src={"/logo.png"}

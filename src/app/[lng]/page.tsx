@@ -58,7 +58,7 @@ const Home = ({ params: { lng } }: HomeProps) => {
           </video>
         )}
         <div className="absolute h-full w-full background-color bg-gradient-to-t from-black to-transparent top-0" />
-        <LogoParallax isVisible={false} />
+        <LogoParallax main isVisible={false} />
       </div>
       <div className="flex flex-col justify-center items-center h-screen w-screen align-items-center fixed top-0 ">
         <div className="flex flex-col w-screen mt-[60vh]">
@@ -90,6 +90,19 @@ const Home = ({ params: { lng } }: HomeProps) => {
             >
               {t("digitalcontenttitle")}
             </button>
+          </div>
+          <div className="w-full flex justify-center mb-[100px] mt-[20px] md:mt-[0px]">
+            <a target="_blank" href={`https://app.skyderdigital.com/${lng}`}>
+              <button
+                className={`animate-pulse1 ${
+                  isVisible && !loader ? "animate-fade-in " : "hidden"
+                } border-white border-2 rounded-xl p-6 bg-gradient-to-r from-blue-500 to-teal-400 text-white hover:bg-gradient-to-l
+             md:m-6
+            `}
+              >
+                {t("AItitle")}
+              </button>
+            </a>
           </div>
         </div>
         <Spinner className={loader ? "" : "invisible"} />
