@@ -32,7 +32,7 @@ export const Content = ({ params: { lng } }: HomeProps) => {
   return (
     <div className="h-full flex flex-col justify-center items-center">
       <AppHeader lng={lng} contactRef={contactRef} servicesRef={servicesRef} />
-      <LogoParallax isVisible={isVisible} />
+      <LogoParallax main={false} isVisible={isVisible} />
       <Title text={t("ittitle")} />
       <ScrollDownMessage
         firstScrollRef={firstScrollRef}
