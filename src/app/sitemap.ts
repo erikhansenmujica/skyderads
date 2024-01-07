@@ -3,7 +3,7 @@ import { MetadataRoute } from "next";
 const URL = "https://skyderdigital.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ["", "/aboutus", "/itsolutions", "/digitalcontent"]
+  const routes = ["/", "/aboutus", "/itsolutions", "/digitalcontent"]
     .map((route) => [
       {
         url: `${URL}/es${route}`,

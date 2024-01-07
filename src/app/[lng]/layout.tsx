@@ -31,12 +31,12 @@ export async function generateMetadata(props: HomeProps): Promise<Metadata> {
       shortcut: "/faviconlogo.png",
       apple: "/faviconlogo.png",
     },
-    metadataBase: new URL("https://skyderdigital.com"),
+    metadataBase: new URL(`https://skyderdigital.com/${props.params.lng}`),
     verification: {
       google: "Oo_6jAoHQzYV4P5UpM-TDI99dFhfcEro7Tfokc6VOHU",
     },
     alternates: {
-      canonical: `https://skyderdigital.com`,
+      canonical: `https://skyderdigital.com/${props.params.lng}`,
     },
   };
 }
