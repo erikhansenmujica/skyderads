@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 
 const URL = "https://skyderdigital.com";
+const pito = "8=====>";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = ["/", "/aboutus", "/itsolutions", "/digitalcontent"]
